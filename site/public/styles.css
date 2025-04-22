@@ -23,3 +23,28 @@ body {
     margin-right: auto;
     text-align: justify;
 }
+.navbar {
+    background-color: #3E0457;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar a {
+    font-family: "JetBrainsMono", sans-serif;
+    color: #F2E7FA;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #D1A9E6;
+}
+
+.bigimg {
+    margin: 10px auto 20px;
+    display: block;
+    width: 50%;
+    height: 50%;
+}
