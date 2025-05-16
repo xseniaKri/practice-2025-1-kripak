@@ -1,3 +1,6 @@
 [submodule "tg_bot"]
 	path = tg_bot
 	url = git@github.com:xseniaKri/python-bot.git
+[submodule "tg-bot"]
+	path = tg-bot
+	url = https://github.com/xseniaKri/python-bot
