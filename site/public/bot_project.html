@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Telegram-бот</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="participants.html">Мое участие</a>
+        <a href="journal.html">Журнал</a>
+        <a href="interaction.html">Взаимодействие с организацией-партнером</a>
+        <a href="bot_project.html">Вариативная часть - проект</a>
+        <a href="resourses.html">Ресурсы</a>
+    </div>
+
+    <h1>Telegram-бот</h1>
+
+    <div class="text">
+        <p><strong>Цель проекта</strong>: создание Telegram-бота для проведения теста/викторины, который помогает пользователю определить уровень владения английским языком. Проект был реализован с использованием Python и фреймворка Aiogram 3 — современного инструмента для асинхронной разработки Telegram-ботов.</p>
+
+        <p><strong>Структура проекта</strong>:</p>
+        <pre style="font-size: 18px; background-color: #eee; padding: 10px;">
+quiz_bot/
+├── app/
+│   ├── data/
+│   │   └── questions.py         # Список вопросов и вариантов ответов
+│   ├── db/
+│   │   └── crud.py              # Взаимодействие с базой данных
+│   │   └── db.py                # Подключение к базе данных
+│   ├── handlers/
+│   │   ├── start.py             # Приветствие и начало диалога
+│   │   └── quiz.py              # Основная логика викторины
+│   ├── keyboards/
+│   │   └── quiz_kb.py           # Генерация инлайн-клавиатур
+│   ├── states/
+│   │   └── quiz_states.py       # Определение состояний FSM
+│   ├── create_bot.py            # Настройки бота
+│   ├── main.py                  # Точка входа в приложение
+│   ├── webserver.py             # FastAPI-сервер для получения результатов
+├── initdb/
+│   ├── init.sql                 # Скрипт создания таблиц
+├── docker-compose.yml           # Настройка БД в Docker
+└── requirements.txt             # Зависимости проекта
+        </pre>
+
+        <p><strong>Используемые технологии:</strong></p>
+        <ul style="font-size: 20px; line-height: 1.6;">
+            <li>Python 3.10+</li>
+            <li>Aiogram 3</li>
+            <li>FSM — управление состояниями</li>
+            <li>Инлайн-клавиатуры Telegram</li>
+            <li>PostgreSQL — хранение результатов</li>
+            <li>FastAPI — API для получения данных</li>
+        </ul>
+
+        <p><strong>Ход работы над проектом:</strong></p>
+        <ul style="font-size: 20px; line-height: 1.6;">
+            <li><strong>02.04</strong> — был заполнен главный README.md и настроен удалённый репозиторий с привязкой ветки master.</li>
+            <li><strong>03.04</strong> — была создана структура сайта и начата разработка Telegram-бота.</li>
+            <li><strong>22.04</strong> — был реализован базовый отклик на команду /start и добавлена логика ответа на сообщения.</li>
+            <li><strong>23.04</strong> — был заполнен файл документации и добавлен бот как подмодуль основного репозитория.</li>
+            <li><strong>16.05</strong> — был реализован основной функционал викторины, включая FSM и обработку ответов.</li>
+            <li><strong>18.05–20.05</strong> — было организовано взаимодействие с партнёрской организацией в рамках участия в ИТ-чемпионате «Цифровая Эра Транспорта».</li>
+            <li><strong>21.05</strong> — был добавлен функционал сохранения результатов в базу данных и реализован FastAPI-эндпоинт для их получения. Документация была полностью завершена.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
